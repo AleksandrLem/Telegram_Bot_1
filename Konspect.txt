@@ -1,0 +1,26 @@
+https://api.telegram.org/bot<token>/METHOD_NAME - набираем в браузере, вернет ответ в json формате
+
+git --version - проверка версии git
+git init - иницаализация git (нужно находиться в корне проекта)
+git -h - справка по командам
+git config --list - данные конфигурации git
+git status - состояние файлов на дынный момент
+git add <имя_файла> - добавляем файл в индекс
+git rm --cached <файл> - удаляем файл из индекса
+git read-tree --empty - удаляем все файлы из индекса
+git commit -m "<комментарий к коммиту>" - фиксируем текущее состояние
+git show <number> - инфа по номеру коммита, например, git show 17742b2
+
+Глабальные настройки пользователя
+
+git config --global user.name "Mikhail Kryzhanovskiy"
+git config --global user.email "kms101@yandex.ru"
+
+
+Git Hub
+сначала заходим в папку, куда будем клонировать репозиториз из github
+git clone <ссылка_на_репозиторий>
+
+заходим в папку с уже клонированным репозиторием, вводим команду
+git remote -v - покажет две ссылки на репозиторий (http or ssh)
+git remote set-url origin <ссылка_на_репозиторий_для_доступа_по_ssh>

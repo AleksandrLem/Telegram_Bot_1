@@ -20,6 +20,12 @@ git config --global user.email "kms101@yandex.ru"
 
 
 Git Hub
+уже созданные локальные и удаленные хранилица связываем так:
+git remote add произвольное-имя url-хранилища
+
+чтобы просмотреть список имён уже привязанных хранилищ,
+git remote show
+
 сначала заходим в папку, куда будем клонировать репозиториз из github
 git clone <ссылка_на_репозиторий>
 
@@ -28,6 +34,7 @@ git remote -v - покажет две ссылки на репозиторий (
 git remote set-url origin <ссылка_на_репозиторий_для_доступа_по_ssh>
 
 git push origin main - отправляем commit на git_hub
+git push main master - это сработало, когда была ошибка
 
 Команды для выполнения обновлений с git_hub
 git fetch
@@ -37,4 +44,18 @@ git pull
 git pull <remote> <branch> - или так, где <remote> - <удаленный> репозиторий
 <branch> - ветвь
 
+КОГДА ОШИБКИ
 
+Нет ветки master, вот и ругается. Ветка по умолчанию на GitHub теперь называется main.
+
+Команда git branch -vv покажет какие ветки есть локально и с какими внешними ветками связаны.
+* main 0e02250 [origin/main] v.01
+
+Надо было делать git push origin main
+Либо просто git push т. е. отправить текущую ветку в связанную с ней ветку на внешнем репозитории.
+В нашем случае текущая ветка main (помеченная звёздочкой)
+отслеживает исходную ветку main в репозитории обозначенном как origin
+
+Что скрывается за сокращением origin покажет команда git remote -v
+origin	https://github.com/xxx/xxx.git (fetch)
+origin	https://github.com/xxx/xxx.git (push)

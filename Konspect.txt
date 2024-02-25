@@ -1,5 +1,6 @@
 https://api.telegram.org/bot<token>/METHOD_NAME - набираем в браузере, вернет ответ в json формате
 
+source bot_venv/Scripts/activate - для git_bash активация виртуального окружения
 git --version - проверка версии git
 git init - иницаализация git (нужно находиться в корне проекта)
 git -h - справка по командам
@@ -19,13 +20,6 @@ git config --global user.email "kms101@yandex.ru"
 
 
 Git Hub
-уже созданные локальные и удаленные хранилица связываем так:
-git remote add произвольное-имя url-хранилища
-
-чтобы просмотреть список имён уже привязанных хранилищ,
-git remote show
-
-для колнирования удаленного хранилища
 сначала заходим в папку, куда будем клонировать репозиториз из github
 git clone <ссылка_на_репозиторий>
 
@@ -40,3 +34,7 @@ git fetch
 git merge
 Вместо двух команд выше можно использовать одну:
 git pull
+git pull <remote> <branch> - или так, где <remote> - <удаленный> репозиторий
+<branch> - ветвь
+
+

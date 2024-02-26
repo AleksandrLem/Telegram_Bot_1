@@ -1,5 +1,6 @@
 https://api.telegram.org/bot<token>/METHOD_NAME - набираем в браузере, вернет ответ в json формате
 
+source bot_venv/Scripts/activate - для git_bash активация виртуального окружения
 git --version - проверка версии git
 git init - иницаализация git (нужно находиться в корне проекта)
 git -h - справка по командам

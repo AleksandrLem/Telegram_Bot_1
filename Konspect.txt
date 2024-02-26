@@ -20,7 +20,7 @@ git config --global user.email "kms101@yandex.ru"
 
 Git Hub
 уже созданные локальные и удаленные хранилица связываем так:
-git remote add произвольное-имя url-хранилища
+git remote add произвольное-имя (обычно origin) url-хранилища
 
 чтобы просмотреть список имён уже привязанных хранилищ,
 git remote show

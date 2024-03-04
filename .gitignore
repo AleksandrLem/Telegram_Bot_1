@@ -6,3 +6,9 @@ task.py
 tempCodeRunnerFile.python
 Konspect.txt
 bot_token.py
+
+.env
+.mypy_cache/
+.vscode/
+venv/
+__pycache__/

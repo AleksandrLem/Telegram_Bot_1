@@ -38,11 +38,11 @@ git push origin main - отправляем commit на git_hub
 
 Команды для выполнения обновлений с git_hub
 git branch - просмотреть текущую ветку
+git checkout -b main - создать новую ветку main и сразу перейти на нее
 git fetch
 git merge
 Вместо двух команд выше можно использовать одну:
 git pull
 git pull <remote> <branch> - или так, где <remote> - <удаленный> репозиторий
 git branch --set-upstream-to=<внешний-репозиторий>/<внешняя-ветка> <локальная-ветка>
-
 git remote remove [имя репозитория] - отключение от веншнего репозитория

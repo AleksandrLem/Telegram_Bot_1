@@ -5,4 +5,14 @@ id_rsa_bot.pub
 task.py
 tempCodeRunnerFile.python
 Konspect.txt
-.gitignore
+<<<<<<< HEAD
+
+=======
+bot_token.py
+
+.env
+.mypy_cache/
+.vscode/
+venv/
+__pycache__/
+>>>>>>> 3463a6bfd7db0bd750805fc9e5de104d8af2107e

@@ -6,3 +6,6 @@ user_dict_template = {
 
 # Инициализируем "базу данных"
 users_db = {}
+
+
+#book = {users_db (это ID): user_dict_template}

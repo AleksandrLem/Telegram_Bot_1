@@ -38,6 +38,8 @@ git push origin main - отправляем commit на git_hub
 
 Команды для выполнения обновлений с git_hub
 git branch - просмотреть текущую ветку
+git branch new_branch - создать новую ветку
+git checkout new_branch - перейти в новую ветку
 git checkout -b main - создать новую ветку main и сразу перейти на нее
 git fetch
 git merge

@@ -308,7 +308,8 @@ async def process_spent_money_sent(message: Message, state: FSMContext):
     # Завершаем машину состояний
     await state.clear()
     await message.answer(text='Спасибо!\n\n Данные внесены\n'
-                         'Чтобы посмотреть результат нажмите на кнопку',
+                         'Чтобы посмотреть результат нажмите на кнопку\n'
+                         '"Результат расчетов по топливу"',
                          reply_markup=keyboard_fuel)
 
 
@@ -344,7 +345,7 @@ async def process_showdata_command(message: Message):
         # Если анкеты пользователя в базе нет - предлагаем заполнить
         await message.answer(
             text='Вы еще не заполняли данные. Чтобы приступить - '
-            'отправьте команду /calculation',
+            'отправьте команду /menu',
             reply_markup=ReplyKeyboardRemove()
         )
 
@@ -437,8 +438,7 @@ async def process_result_speed_command(message: Message):
         # Если анкеты пользователя в базе нет - предлагаем заполнить
         await message.answer(
             text='Вы еще не заполняли данные. Чтобы приступить - '
-            '/calculation - расчеты по топливу\n'
-            '/speed_calc - расчет средней скорости',
+            'отправьте команду /menu',
             reply_markup=ReplyKeyboardRemove()
         )
 
@@ -447,7 +447,7 @@ async def process_result_speed_command(message: Message):
 # для которых есть отдельные хэндлеры, вне состояний
 @dp.message(StateFilter(default_state))
 async def send_echo(message: Message):
-    await message.reply(text='Извините, моя твоя не понимать')
+    await message.reply(text='Извините, эта команда мне неизвестна')
 
 
 

@@ -1,3 +1,5 @@
+hostnamectl - просмотреть версию
+
 https://api.telegram.org/bot<token>/METHOD_NAME - набираем в браузере, вернет ответ в json формате
 
 source bot_venv/Scripts/activate - для git_bash активация виртуального окружения
@@ -48,3 +50,30 @@ git pull
 git pull <remote> <branch> - или так, где <remote> - <удаленный> репозиторий
 git branch --set-upstream-to=<внешний-репозиторий>/<внешняя-ветка> <локальная-ветка>
 git remote remove [имя репозитория] - отключение от веншнего репозитория
+
+-----------------------
+PostgreSQL
+-----------------------
+service postgresql status - проверка работы СУБД
+service postgresql - покажет команды, которые можно выполнить
+
+sudo -i -u postgres --- вход в postgresql
+psql ------------------  вход в консоль БД
+
+\l - список баз данных
+q - выход
+\q - выйти из консоли psql
+createdb имяБД - создает БД
+clear - очищает экран от предыдущих шагов и команд
+dropdb имяБД - удаляет БД
+\du - покажет таблицу с именами и правами пользователей
+ALTER USER postgres WITH PASSWORD '1q2w3e4r'; - меняет пароль суперюзера
+ALTER ROLE - будет означать, что пароль изменен
+CREATE USER new_user WITH PASSWORD '1q2w3e4r'; - создает нового пользователя и пароль для него
+CREATE ROLE - будет означать, что новый пользователь создан
+ALTER USER new_user WITH SUPERUSER; - дает права суперюзера пользователю new_user
+ALTER ROLE - будет означать, что успешно изменены права пользователя
+postgres=# DROP USER new_user; - удаляет пользователя new_user
+DROP ROLE - будет означать, что пользователь успешно удален
+postgres@alex-Veriton-S2610G:~$ exit - выход
+postgres@alex-Veriton-S2610G:~$ man psql - покажет все команды
